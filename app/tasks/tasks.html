@@ -1,6 +1,6 @@
-<section class="content">
+<section class="content" ng-controller="TasksCtrl as tasks">
     <div class="box tasks">
-        <tasks-table></tasks-table>  
+        <tasks-table name="{{ tasks.data }}"></tasks-table> 
     </div>
 </section>
 
