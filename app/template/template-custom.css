@@ -1,1 +1,24 @@
-.main-footer { position: fixed; bottom: 0px; width: 100%;}
+.main-footer { 
+    position: fixed; 
+    bottom: 0px; 
+    width: 100%;
+}
+
+.content {
+    background-color:#84dfff;    
+    background-image: url('../../assets/animals-2173635_640.png');
+    background-size: 70px;
+    height: 90vh;
+}
+
+.main-header {
+    background-color: #172023
+}
+
+.tasks {
+    margin-top: 10px
+}
+
+.footer {
+    justify-content: space-between;
+}
