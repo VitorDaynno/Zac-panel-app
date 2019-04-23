@@ -1,6 +1,33 @@
 <section class="content" ng-controller="TasksCtrl as tasks">
     <div class="box tasks">
-        <tasks-table name="{{ tasks.data }}"></tasks-table> 
+        <table class="danger table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Tarefa
+                    </th>
+                    <th>
+                        Dia
+                    </th>
+                    <th>
+                        Hora
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="task in tasks.data">
+                    <td>
+                        {{ task.name }}
+                    </td>
+                    <td>
+                        {{ tasks.parseDate(task.date) }}
+                    </td>
+                    <td>
+                        {{ tasks.parseHour(task.date) }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
