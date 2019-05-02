@@ -12,13 +12,17 @@
 }
 
 .main-header {
-    background-color: #172023
+    background-color: #172023;
 }
 
 .tasks {
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .footer {
     justify-content: space-between;
+}
+
+.table-actions {
+    width: 140px;
 }

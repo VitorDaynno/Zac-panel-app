@@ -1,0 +1,38 @@
+<div class="tasks">
+    <table class="danger table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Tarefa
+                </th>
+                <th>
+                    Dia
+                </th>
+                <th>
+                    Hora
+                </th>
+                <th>
+                    Ações
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="task in tasksCtrl.tasks">
+                <td>
+                    {{ task.name }}
+                </td>
+                <td>
+                    {{ tasksCtrl.parseDate(task.date) }}
+                </td>
+                <td>
+                    {{ tasksCtrl.parseHour(task.date) }}
+                </td>
+                <td class="table-actions">
+                    <button class="btn btn-warning"><i class="fa fa-pencil" ng-click="tasksCtrl.showTabUpdate(task)"></i></button>
+                    <button class="btn btn-danger"><i class="fa fa-trash-o" ng-click="tasksCtrl.showTabDelete()"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

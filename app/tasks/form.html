@@ -1,13 +1,18 @@
 <div role="form">
     <div class="box-body">
-        <field id="task" label="Tarefa" placeholder="Informe a tarefa"></field>
-        <field id="day" label="Dia" placeholder="Informe o dia" type="date"></field>
-        <field id="hour" label="Horário" placeholder="Informe o horário" type="time"></field>
+        <field id="task" label="Tarefa" placeholder="Informe a tarefa"
+            model="tasksCtrl.task.name"></field>
+        <field id="day" label="Dia" placeholder="Informe o dia"
+            model="tasksCtrl.task.date"></field>
+        <field id="hour" label="Horário" placeholder="Informe o horário"
+            model="tasksCtrl.task.hour"></field>
     </div>
     <div class="box-footer">
-        <button class="btn btn-primary">Incluir</button>
-        <button class="btn btn-info">Alterar</button>
-        <button class="btn btn-danger">Excluir</button>
+        <button class="btn btn-primary" ng-if="tasksCtrl.tabCreate"
+            ng-click="tasksCtrl.create()">Incluir</button>
+        <button class="btn btn-info" ng-if="tasksCtrl.tabUpdate">Alterar</button>
+        <button class="btn btn-danger" ng-if="tasksCtrl.tabDelete"
+            ng-click="tasksCtrl.delete()">Excluir</button>
         <button class="btn btn-default">Cancelar</button>
     </div>
 </div>
