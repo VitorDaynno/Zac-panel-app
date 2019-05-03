@@ -1,11 +1,12 @@
 (function() {
     angular.module('zacPanel').controller('TasksCtrl', [
         '$http',
+        'msgs',
         'tabs',
         TasksController
     ])
 
-    function TasksController($http, tabs) {
+    function TasksController($http, msgs, tabs) {
         const vm = this;
         const url = 'http://localhost:3003/api/tasks';
 
