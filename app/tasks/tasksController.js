@@ -23,8 +23,8 @@
                 vm.task = {}           
                 vm.refresh()
                 msgs.addSucess('Tarefa criada com sucesso')
-            }).catch(function(){
-                msgs.addError(data.errors)
+            }).catch(function(response){
+                msgs.addError(response.data.errors)
             })
         }
 
