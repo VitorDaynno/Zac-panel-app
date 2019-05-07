@@ -25,6 +25,16 @@ admin-lte@2.3.11:
   resolved "https://registry.yarnpkg.com/admin-lte/-/admin-lte-2.3.11.tgz#da56dcd34d42e9ef1af362be15520a053a9d43db"
   integrity sha1-2lbc001C6e8a82K+FVIKBTqdQ9s=
 
+angular-animate@1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.6.tgz#6925647b141a040d241bf125040f1a150fcd8a70"
+  integrity sha1-aSVkexQaBA0kG/ElBA8aFQ/NinA=
+
+angular-toastr@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/angular-toastr/-/angular-toastr-2.1.1.tgz#9f8350ca482145a44d011a755b8fb3623d60544c"
+  integrity sha1-n4NQykghRaRNARp1W4+zYj1gVEw=
+
 angular-ui-router@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/angular-ui-router/-/angular-ui-router-1.0.3.tgz#bf2494caae95c37cf01af3761d89747cfed2db45"
