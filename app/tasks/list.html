@@ -22,10 +22,10 @@
                     {{ task.name }}
                 </td>
                 <td>
-                    {{ tasksCtrl.parseDate(task.date) }}
+                    {{ task.date }}
                 </td>
                 <td>
-                    {{ tasksCtrl.parseHour(task.date) }}
+                    {{ task.hour }}
                 </td>
                 <td class="table-actions">
                     <button class="btn btn-warning"><i class="fa fa-pencil" ng-click="tasksCtrl.showTabUpdate(task)"></i></button>
