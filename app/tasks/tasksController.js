@@ -19,12 +19,23 @@
         }
 
         vm.create = function() {
-            $http.post(url, vm.task).then((response)=>{
+            const token = localStorage.getItem("token_zac_panel");
+
+            var req = {
+                method: 'POST',
+                url: url,
+                headers: {
+                  'Authorization': `Bearer ${token}`
+                },
+                data: vm.task 
+               }
+               
+            $http(req).then((response)=>{
                 vm.task = {}           
                 vm.refresh()
                 msgs.addSucess('Tarefa criada com sucesso')
             }).catch(function(response){
-                msgs.addError(response.data.errors)
+                msgs.addError(response)
             })
         }
 
