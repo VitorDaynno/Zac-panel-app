@@ -1,0 +1,16 @@
+<div class="login-box" ng-controller="AuthCtrl as auth">
+    <div class="login-logo"> <b>Zac</b> Painel</div>
+    <div class="login-box-body">
+        <p class="login-box-msg">Bem vindo!</p>
+        <form>
+            <auth-field id="authToken" model="auth.user.token" type="input"
+                placeholder="Informe seu Token"></auth-field>
+            <div class="row">
+                <div class="col-sm-4">
+                    <button class="btn btn-primary btn-block btn-flat"
+                        ng-click="auth.login()">Entrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
