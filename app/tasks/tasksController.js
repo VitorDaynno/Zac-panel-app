@@ -3,10 +3,11 @@
         '$http',
         'msgs',
         'tabs',
+        'auth',
         TasksController
     ])
 
-    function TasksController($http, msgs, tabs) {
+    function TasksController($http, msgs, tabs, auth) {
         const vm = this;
         const url = 'http://localhost:3003/api/tasks';
 
@@ -16,6 +17,11 @@
                 vm.task = {};
                 tabs.show(vm, {tabList: true, tabCreate: true})
             })
+            .catch((error) => {
+                if(error.status == 403) {
+                    auth.logout()
+                }
+            })
         }
 
         vm.create = function() {
@@ -24,9 +30,6 @@
             var req = {
                 method: 'POST',
                 url: url,
-                headers: {
-                  'Authorization': `Bearer ${token}`
-                },
                 data: vm.task 
                }
                
